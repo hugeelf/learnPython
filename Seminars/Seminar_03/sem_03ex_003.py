@@ -7,13 +7,23 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
-our_list = ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"]
-find_me = "йцу"
+our_list = ["123", "234", 123, "567"]
+find_me = "123"
 index = [i for i in range(0,len(our_list)) if our_list[i]==find_me]
 if len(index)>1:
     print(index[1])
 else:
     print(-1)
+
+count = 0
+index = -1
+for i in range(len(our_list)):
+    if our_list[i]==find_me:
+        count+=1
+        if count ==2:
+            index=i
+            break
+print (index)
 # # вот такой "Волшебно-код"
 # # генерируем новый список с индексами, и если он длиннее, чем 1, 
 # # то выводим второй
