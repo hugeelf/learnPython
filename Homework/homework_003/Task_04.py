@@ -6,4 +6,3 @@
 
 number = int(input('ВВедите число, которое нужно преобразовать'))
 print(format(number, 'b'))
-print(type(format(number, 'b')))
