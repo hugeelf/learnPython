@@ -57,7 +57,7 @@ def formula_output(k):
         elif k-i == 0:
             answer += f'{cf} '
         else:
-            answer += f'{cf}*X^{k-i} + '
+            answer += f'{cf}*X**{k-i} + '
     last_answer = answer
     if answer[-2] == '+':
         last_answer = answer[0:len(answer)-2]
