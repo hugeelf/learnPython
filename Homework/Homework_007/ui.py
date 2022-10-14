@@ -1,5 +1,6 @@
 def view_data(data):
-    print(data)
+    for i in data:
+        print(i)
 
 
 def get_user_data(a):
