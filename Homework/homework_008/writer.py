@@ -11,8 +11,11 @@ def edit_base(old_string,new_string):
             else:
                 a.append(i)
     old_data = old_string
-    a[a.index(old_data)] = new_string
+    a[a.index(old_data)]= new_string+'\n'
     with open ('base.txt', 'w',encoding='utf-8') as base:
         for i in a:
-            write_to_base(i)
+            if len(i)<=3:
+                continue
+            else:
+                base.write(i)
             
