@@ -4,7 +4,7 @@ import candy_game
 API_TOKEN = ""
 bot = telebot.TeleBot(API_TOKEN)
 
-# candy = 100
+candy = 100
 
 
 @bot.message_handler(commands=['start'])
@@ -20,7 +20,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    candy = 100
+    global candy
     if candy == 0:
         candy = 100
     elif int(message.text) > 28 or int(message.text) < 1 or int(message.text) > candy:
