@@ -12,3 +12,6 @@ def gen_bot_candy (candy):
         if bot_candy == 0:
             return bot_candy
     return bot_candy
+
+
+        
