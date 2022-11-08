@@ -18,7 +18,7 @@ async def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 async def echo_message(message):
     if 'youtu' in message.text:
-        yt = YouTube('https://youtu.be/lSFGxLXDoQc').streams.filter(res='360p').first().download(filename=f'name.mp4')
+        yt = YouTube(message.text).streams.filter(res='360p').first().download(filename=f'name.mp4')
         file = open('name.mp4','rb')
         await bot.send_video(message.from_user.id, file)
 
